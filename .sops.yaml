@@ -1,0 +1,9 @@
+keys:
+  - &laptop age1nlqe77l5wueewdvdxfuhxr3y4edzn9qc4ldkq95l80fgny8utdssm2eumx
+  - &nixbox age16a9m0eaxfl2xr6z26mj3425ks56yd3jqsy5y7nd2yuqj5v9agppqx87905
+creation_rules:
+  - path_regex: secrets/[^/]+\.(yaml|yml|json|env)$
+    key_groups:
+      - age:
+          - *laptop
+          - *nixbox
